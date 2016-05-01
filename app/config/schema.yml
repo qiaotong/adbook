@@ -1,0 +1,24 @@
+Addresses:
+  actAs:
+    Timestampable:
+      created:
+        name: created
+        type: timestamp
+        format: Y-m-d H:i:s
+        notnull: false
+        onInsert: true
+      updated:
+        name: updated
+        type: timestamp
+        format: Y-m-d H:i:s
+        notnull: false
+        expression: NOW()
+  columns:
+    first_name: { type:string(40), notnull: false }
+    last_name: { type:string(40), notnull: false }
+    email: { type:string(40), notnull: false }
+    phone: { type:integer(40), notnull: false }
+    description: { type:object, notnull: false }
+  options:
+    type: MYISAM
+    collate: utf8_general_ci
